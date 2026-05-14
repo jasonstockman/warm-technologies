@@ -2,6 +2,7 @@ import { ArrowUpRight, Mail } from 'lucide-react';
 import type { MouseEvent } from 'react';
 
 import { Button } from './components/ui/button';
+import ShaderBackground from './components/ui/shader-background';
 
 const emailUser = 'hello';
 const emailDomain = 'warm';
@@ -16,8 +17,8 @@ function App() {
 
   return (
     <main className="min-h-screen text-foreground">
-      <div className="pointer-events-none fixed inset-0 -z-10 bg-[radial-gradient(circle_at_84%_0%,color-mix(in_oklch,var(--accent)_16%,transparent),transparent_28rem)]" />
-      <div className="mx-auto flex min-h-screen w-full max-w-5xl flex-col px-5 py-5 sm:px-8 sm:py-8">
+      <ShaderBackground />
+      <div className="relative z-10 mx-auto flex min-h-screen w-full max-w-5xl flex-col px-5 py-5 sm:px-8 sm:py-8">
         <header className="flex items-center gap-4">
           <a
             href="#top"
@@ -34,7 +35,8 @@ function App() {
               Warm Technologies LLC
             </p>
             <h1 className="text-balance text-4xl font-semibold leading-[1.02] tracking-[-0.05em] sm:text-6xl lg:text-7xl">
-              Making frontier technology more warm and human.
+              Making frontier technology more{' '}
+              <span className="font-serif italic tracking-[-0.035em]">warm and human.</span>
             </h1>
             <p className="mt-8 max-w-2xl text-pretty text-lg leading-8 text-muted-foreground sm:text-xl">
               We are a full-stack website and software development company with a focus on AI-powered tooling.
@@ -51,7 +53,7 @@ function App() {
           </div>
         </section>
 
-        <section className="grid gap-6 pb-10 text-center sm:grid-cols-[1fr_auto_1fr_auto_1fr] sm:items-start sm:gap-8 sm:text-center">
+        <section className="grid gap-6 pb-10 text-center sm:grid-cols-[1fr_auto_1fr_auto_1fr] sm:items-stretch sm:gap-8 sm:text-center">
           <SimpleCard title="Websites" copy="Clear, fast marketing sites and product surfaces." />
           <ServiceDivider />
           <SimpleCard title="Software" copy="Full-stack apps, dashboards, internal tools, and integrations." />
@@ -119,7 +121,7 @@ function ServiceDivider() {
   return (
     <div
       aria-hidden="true"
-      className="mx-auto h-px w-8 bg-border/70 sm:mt-2 sm:h-14 sm:w-px"
+      className="mx-auto h-px w-8 bg-border/70 sm:h-full sm:min-h-full sm:w-px sm:self-stretch"
     />
   );
 }
