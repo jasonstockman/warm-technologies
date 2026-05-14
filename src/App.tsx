@@ -1,4 +1,4 @@
-import { ArrowUpRight, Flame, Mail } from 'lucide-react';
+import { ArrowUpRight, Mail } from 'lucide-react';
 import type { MouseEvent } from 'react';
 
 import { Button } from './components/ui/button';
@@ -16,24 +16,15 @@ function App() {
 
   return (
     <main className="min-h-screen text-foreground">
-      <div className="pointer-events-none fixed inset-0 -z-10 bg-[radial-gradient(circle_at_50%_0%,color-mix(in_oklch,var(--accent)_18%,transparent),transparent_34rem)]" />
+      <div className="pointer-events-none fixed inset-0 -z-10 bg-[radial-gradient(circle_at_84%_0%,color-mix(in_oklch,var(--accent)_16%,transparent),transparent_28rem)]" />
       <div className="mx-auto flex min-h-screen w-full max-w-5xl flex-col px-5 py-5 sm:px-8 sm:py-8">
-        <header className="flex items-center justify-between gap-4">
+        <header className="flex items-center gap-4">
           <a
             href="#top"
             className="inline-flex items-center gap-3 text-sm font-medium tracking-tight text-foreground no-underline"
           >
-            <span className="flex size-8 items-center justify-center rounded-xl border border-border bg-card text-muted-foreground shadow-sm">
-              <Flame className="size-4" />
-            </span>
+            <img src="/logo.svg" alt="" className="h-5 w-6 object-contain" aria-hidden="true" />
             Warm Technologies
-          </a>
-          <a
-            href="https://warm.io"
-            className="hidden items-center gap-1 text-sm text-muted-foreground no-underline transition hover:text-foreground sm:inline-flex"
-          >
-            warm.io
-            <ArrowUpRight className="size-3.5" />
           </a>
         </header>
 
@@ -60,9 +51,11 @@ function App() {
           </div>
         </section>
 
-        <section className="grid gap-3 pb-10 sm:grid-cols-3">
+        <section className="grid gap-6 pb-10 text-center sm:grid-cols-[1fr_auto_1fr_auto_1fr] sm:items-start sm:gap-8 sm:text-center">
           <SimpleCard title="Websites" copy="Clear, fast marketing sites and product surfaces." />
+          <ServiceDivider />
           <SimpleCard title="Software" copy="Full-stack apps, dashboards, internal tools, and integrations." />
+          <ServiceDivider />
           <SimpleCard title="AI tooling" copy="Human-centered workflows that make new models actually useful." />
         </section>
 
@@ -74,7 +67,7 @@ function App() {
             <div className="flex items-start justify-between gap-6">
               <div className="flex items-start gap-5">
                 <span className="flex size-16 shrink-0 items-center justify-center rounded-3xl border border-border bg-card text-muted-foreground shadow-sm sm:size-20">
-                  <Flame className="size-8 sm:size-10" strokeWidth={1.75} />
+                  <img src="/logo.svg" alt="" className="h-9 w-11 object-contain sm:h-11 sm:w-14" aria-hidden="true" />
                 </span>
                 <div>
                   <h2 className="text-base font-medium tracking-[-0.02em]">Warm</h2>
@@ -122,11 +115,20 @@ function ObfuscatedEmail() {
   );
 }
 
+function ServiceDivider() {
+  return (
+    <div
+      aria-hidden="true"
+      className="mx-auto h-px w-8 bg-border/70 sm:mt-2 sm:h-14 sm:w-px"
+    />
+  );
+}
+
 function SimpleCard({ title, copy }: { title: string; copy: string }) {
   return (
     <div className="p-5">
       <h2 className="text-base font-medium tracking-[-0.02em]">{title}</h2>
-      <p className="mt-3 text-sm leading-6 text-muted-foreground">{copy}</p>
+      <p className="mx-auto mt-3 max-w-52 text-sm leading-6 text-muted-foreground">{copy}</p>
     </div>
   );
 }

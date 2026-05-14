@@ -33,8 +33,10 @@
   --brand-primary: #85807a;
   --brand-accent: #7e7a8a;
   --brand-neutral: #837f7c;
+  --surface-beige: oklch(from var(--brand-neutral) 0.955 0.009 h);
+  --surface-purple: oklch(from var(--brand-accent) 0.88 0.035 h);
 
-  --background: oklch(from var(--brand-neutral) 0.99 0.005 h);
+  --background: oklch(1 0 0);
   --foreground: oklch(from var(--brand-neutral) 0.35 0.015 h);
   --card: oklch(from var(--brand-neutral) 0.998 0.002 h / 0.78);
   --card-foreground: var(--foreground);
@@ -77,8 +79,8 @@ body {
   min-height: 100vh;
   margin: 0;
   background:
-    radial-gradient(circle at 18% 0%, color-mix(in oklch, var(--accent) 14%, transparent), transparent 30rem),
-    linear-gradient(180deg, var(--background) 0%, color-mix(in oklch, var(--background) 91%, var(--muted)) 100%);
+    radial-gradient(circle at 100% 0%, color-mix(in oklch, var(--surface-purple) 28%, transparent), transparent 30rem),
+    linear-gradient(135deg, oklch(1 0 0) 0%, oklch(1 0 0) 28%, color-mix(in oklch, var(--surface-beige) 36%, white) 68%, var(--surface-beige) 100%);
   font-family: var(--font-sans);
   font-size: 0.9em;
   font-weight: 400;
