@@ -28,6 +28,13 @@ function App() {
             </span>
             Warm Technologies
           </a>
+          <a
+            href="https://warm.io"
+            className="hidden items-center gap-1 text-sm text-muted-foreground no-underline transition hover:text-foreground sm:inline-flex"
+          >
+            warm.io
+            <ArrowUpRight className="size-3.5" />
+          </a>
         </header>
 
         <section id="top" className="flex flex-1 items-center py-20 sm:py-28">
@@ -41,6 +48,9 @@ function App() {
             <p className="mt-8 max-w-2xl text-pretty text-lg leading-8 text-muted-foreground sm:text-xl">
               We are a full-stack website and software development company with a focus on AI-powered tooling.
             </p>
+            <p className="mt-5 max-w-2xl text-pretty text-base leading-7 text-muted-foreground">
+              The company exists to make cutting-edge technology accessible, practical, and easy for humans to use. We believe the best software should reduce friction, clarify decisions, and feel calm in the hands of the people who rely on it.
+            </p>
             <div className="mt-10 flex flex-col gap-3 sm:flex-row sm:items-center">
               <EmailButton onClick={handleEmailClick} />
               <p className="text-sm text-muted-foreground">
@@ -50,10 +60,27 @@ function App() {
           </div>
         </section>
 
-        <section className="grid gap-3 pb-20 sm:grid-cols-3">
+        <section className="grid gap-3 pb-10 sm:grid-cols-3">
           <SimpleCard title="Websites" copy="Clear, fast marketing sites and product surfaces." />
           <SimpleCard title="Software" copy="Full-stack apps, dashboards, internal tools, and integrations." />
           <SimpleCard title="AI tooling" copy="Human-centered workflows that make new models actually useful." />
+        </section>
+
+        <section className="pb-20">
+          <a
+            href="https://warm.io"
+            className="group block rounded-3xl border border-border bg-card/70 p-5 text-foreground no-underline shadow-sm backdrop-blur transition hover:border-primary/30 hover:bg-card"
+          >
+            <div className="flex items-start justify-between gap-4">
+              <div>
+                <h2 className="text-base font-medium tracking-[-0.02em]">Warm</h2>
+                <p className="mt-3 max-w-2xl text-sm leading-6 text-muted-foreground">
+                  Our work is connected to Warm, the personal finance platform at warm.io. It reflects the same philosophy: modern software should make complex systems easier to understand, less intimidating, and more useful in everyday life.
+                </p>
+              </div>
+              <ArrowUpRight className="mt-1 size-4 shrink-0 text-muted-foreground transition group-hover:text-foreground" />
+            </div>
+          </a>
         </section>
 
         <footer className="border-t border-border py-6 text-sm text-muted-foreground">
