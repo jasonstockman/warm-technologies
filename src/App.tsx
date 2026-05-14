@@ -22,9 +22,15 @@ function App() {
         <header className="flex items-center gap-4">
           <a
             href="#top"
+            aria-label="Warm Technologies home"
             className="inline-flex items-center gap-3 text-sm font-medium tracking-tight text-foreground no-underline"
           >
-            <img src="/logo.svg" alt="" className="h-5 w-6 object-contain" aria-hidden="true" />
+            <img
+              src="/logo.svg"
+              alt=""
+              className="h-5 w-6 object-contain"
+              aria-hidden="true"
+            />
             Warm Technologies
           </a>
         </header>
@@ -64,12 +70,18 @@ function App() {
         <section className="pb-20">
           <a
             href="https://warm.io"
+            aria-label="Visit Warm at warm.io"
             className="group block rounded-3xl border border-border bg-card/70 p-5 text-foreground no-underline shadow-sm backdrop-blur transition hover:border-primary/30 hover:bg-card"
           >
             <div className="flex items-start justify-between gap-6">
               <div className="flex items-start gap-5">
                 <span className="flex size-16 shrink-0 items-center justify-center rounded-3xl border border-border bg-card text-muted-foreground shadow-sm sm:size-20">
-                  <img src="/logo.svg" alt="" className="h-9 w-11 object-contain sm:h-11 sm:w-14" aria-hidden="true" />
+                  <img
+                    src="/warm-logo.svg"
+                    alt=""
+                    className="h-9 w-11 object-contain sm:h-11 sm:w-14"
+                    aria-hidden="true"
+                  />
                 </span>
                 <div>
                   <h2 className="text-base font-medium tracking-[-0.02em]">Warm</h2>
@@ -84,7 +96,7 @@ function App() {
         </section>
 
         <footer className="border-t border-border py-6 text-sm text-muted-foreground">
-          © {new Date().getFullYear()} Warm Technologies LLC
+          © 2026 Warm Technologies LLC
         </footer>
       </div>
     </main>

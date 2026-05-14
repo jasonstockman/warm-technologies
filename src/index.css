@@ -88,6 +88,9 @@ body {
   background:
     radial-gradient(circle at 100% 0%, color-mix(in oklch, var(--surface-purple) 31%, transparent), transparent 30rem),
     linear-gradient(135deg, oklch(1 0 0) 0%, oklch(1 0 0) 28%, color-mix(in oklch, var(--surface-beige) 40%, white) 68%, var(--surface-beige) 100%);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: 100vw 100vh;
   font-family: var(--font-sans);
   font-size: 0.9em;
   font-weight: 400;
