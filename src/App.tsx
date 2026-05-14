@@ -36,7 +36,7 @@ function App() {
             </p>
             <h1 className="text-balance text-4xl font-semibold leading-[1.02] tracking-[-0.05em] sm:text-6xl lg:text-7xl">
               Making frontier technology more{' '}
-              <span className="font-serif italic tracking-[-0.035em]">warm and human.</span>
+              <span className="font-display italic tracking-[-0.035em]">warm and human.</span>
             </h1>
             <p className="mt-8 max-w-2xl text-pretty text-lg leading-8 text-muted-foreground sm:text-xl">
               We are a full-stack website and software development company with a focus on AI-powered tooling.
