@@ -26,7 +26,7 @@ pnpm install
 pnpm dev
 ```
 
-Local URL: http://localhost:5173/
+Local URL: https://technologies.warm.localhost/
 
 ## Checks
 
